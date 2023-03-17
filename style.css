@@ -1,0 +1,92 @@
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    perspective: 20em;
+    perspective-origin: 77px 100px;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 50px;
+    width: 750px;
+    height: 550px;
+    background-color: rgb(60, 55, 55);
+}
+
+div#cube{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transform-style: preserve-3d;
+}
+        /* Front */
+div#wall_1{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    transform:translateX(-100px) translateZ(90px) rotateY(90deg);
+}
+        /* Back */
+div#wall_2{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: cyan;
+    transform:translateX(100px) translateZ(90px) rotateY(90deg);
+}
+        /* up */
+div#wall_3{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    top: -200px;
+    transform: rotateX(90deg) translateY(90px);
+}
+        /* left */
+div#wall_4{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: orange;
+    left: -100px;
+    transform: translateY(100px); transform:translateZ(-10px);
+}
+        /* down */
+div#wall_5{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: violet;
+    top: 0px;
+    transform: rotateX(90deg) translateY(90px);
+}
+        /* right */
+div#wall_6{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    transform: translateX(100px); transform:translateZ(190px);
+}
+
+/*
+@keyframes cubeMove{
+    0%{
+        transform: rotateY(180deg);
+    }
+    50%{
+        transform: rotateX(280deg);
+    }
+    100%{
+        transform: rotateY(180deg);
+    }
+}
+*/
